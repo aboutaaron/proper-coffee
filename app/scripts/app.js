@@ -4,11 +4,12 @@ var app = app || {};
 
 $(function() {
     var coffees = [
-        { name: 'double espresso', milk: 0, espresso: 2, other: 'none' },
-        { name: 'macchiato', milk: 1, espresso: 2, other: 'none' },
-        { name: 'cappuccino', milk: 3, espresso: 2, other: 'none' },
-        { name: 'latte', milk: 4, espresso: 2, other: 'none' },
-        { name: 'mocha', milk: 4, espresso: 2, other: 'Chocolate' }
+        { name: 'double espresso', milk: 0, espresso: 20, extra: 0 },
+        { name: 'macchiato', milk: 10, espresso: 20, extra: 0 },
+        { name: 'cappuccino', milk: 30, espresso: 20, extra: 0 },
+        { name: 'americano', milk: 0, espresso: 20, extra: 30 },
+        { name: 'latte', milk: 40, espresso: 20, extra: 0 },
+        { name: 'mocha', milk: 40, espresso: 20, extra: 10 }
     ];
 
     new app.CafeView(coffees)

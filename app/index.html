@@ -40,8 +40,14 @@
 
             <!-- Template -->
             <script id='coffee-template' type='text/template'>
-                <h3 id='coffee-drink'><%= name %></h3>
-                <p><%= espresso %> parts espresso and <%= milk %> parts milk.</p>
+                <section class='coffee-drink'>
+                    <span id="air" style='margin-top: <%= 110 - ( extra + milk + espresso ) %>px'></span>
+                    <span id="extra" style='height: <%= extra %>px'></span>
+                    <span id="milk" style='height: <%= milk %>px'></span>
+                    <span id="espresso" style='height: <%= espresso %>px'></span>
+                </section>
+                <h3 id="coffee-name"><%= name %></h3>
+                <p><%= espresso %> shots of espresso and <%= milk %> parts milk.</p>
             </script>
 
         </section><!-- #coffee-app -->
@@ -65,6 +71,7 @@
         <script src="components/underscore/underscore-min.js"></script>
         <script src="components/backbone/backbone-min.js"></script>
         <script src="components/backbone.localStorage/backbone.localStorage-min.js"></script>
+        <script src="components/d3/d3.min.js"></script>
 
         <!-- Backbone -->
         <script src="scripts/models/coffee.js"></script>

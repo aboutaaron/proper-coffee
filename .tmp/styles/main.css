@@ -8290,3 +8290,34 @@ body {
   font-family: "Open Sans", san-serif;
   margin-top: 20px;
 }
+
+/* line 16, ../../app/styles/main.scss */
+.coffee-container .coffee-drink {
+  border: 4px solid black;
+  width: 100px;
+  height: 110px;
+  margin: 0 auto;
+}
+/* line 22, ../../app/styles/main.scss */
+.coffee-container .coffee-drink #air {
+  display: block;
+}
+/* line 26, ../../app/styles/main.scss */
+.coffee-container .coffee-drink #milk {
+  background-color: #fbf3dc;
+  display: block;
+}
+/* line 31, ../../app/styles/main.scss */
+.coffee-container .coffee-drink #espresso {
+  background-color: #915C2C;
+  display: block;
+}
+/* line 36, ../../app/styles/main.scss */
+.coffee-container .coffee-drink #extra {
+  background-color: #45280E;
+  display: block;
+}
+/* line 42, ../../app/styles/main.scss */
+.coffee-container h3, .coffee-container p {
+  text-align: center;
+}
