@@ -11,23 +11,40 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="styles/main.css">
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
     </head>
     <body>
-        <div class="container">
-            <div class="hero-unit">
-                <h1>'Allo, 'Allo!</h1>
-                <p>You now have</p>
-                <ul>
-                    <li>HTML5 Boilerplate</li>
-                    <li>Twitter Bootstrap</li>
-                </ul>
-                <p>installed.</p>
-                <h3>Enjoy coding! - Yeoman</h3>
-            </div>
-        </div>
+        <section id="coffee-app" class="container">
+            <header id="header">
+                <h1>Proper Coffee</h1>
+                <small>The best way to make espresso drinks</small>
+            </header>
+
+            <section id="coffee" class="row"></section>
+
+            <!-- <section class="span12">
+                <form action="#" id="addCoffee">
+                    <h2>What you drinking?</h2>
+                    <section>
+                        <label for="name"></label><input type="text" id="name" placeholder="Latte">
+                        <label for="espresso"></label><input type="text" id="espresso" placeholder="how many espresso shots?">
+                        <label for="milk"></label><input type="text" id="milk" placeholder="Milk to espresso ratio?">
+                        <hr>
+                        <button class="btn btn-primary" id="add">Add coffee drink</button>
+                    </section>
+                </form>
+            </section> -->
+
+            <!-- Template -->
+            <script id='coffee-template' type='text/template'>
+                <h3 id='coffee-drink'><%= name %></h3>
+                <p><%= espresso %> parts espresso and <%= milk %> parts milk.</p>
+            </script>
+
+        </section><!-- #coffee-app -->
 
         <!--[if lt IE 7]>
             <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
@@ -44,6 +61,17 @@
         <!-- build:js scripts/jquery.js -->
         <script src="components/jquery/jquery.js"></script>
         <!-- endbuild -->
+
+        <script src="components/underscore/underscore-min.js"></script>
+        <script src="components/backbone/backbone-min.js"></script>
+        <script src="components/backbone.localStorage/backbone.localStorage-min.js"></script>
+
+        <!-- Backbone -->
+        <script src="scripts/models/coffee.js"></script>
+        <script src="scripts/collections/cafe.js"></script>
+        <script src="scripts/views/coffee.js"></script>
+        <script src="scripts/views/cafe.js"></script>
+        <script src="scripts/app.js"></script>
 
         <!-- build:js scripts/plugins.js -->
         <script src="components/sass-bootstrap/js/bootstrap-affix.js"></script>
