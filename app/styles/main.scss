@@ -3,6 +3,7 @@
 
 
 body {
+    //background-image: url('../images/paper_fibers.png');
     font-family: "Open Sans", san-serif;
     font-smoothing: antialiased;
     margin-top: 20px;
@@ -10,6 +11,11 @@ body {
 
 #header {
     @extend .hero-unit;
+    background-color: transparent;
+    color: #0D7851;
+    h1 {
+        font-family: 'Junge', cursive;
+    }
 }
 
 .coffee-container {
