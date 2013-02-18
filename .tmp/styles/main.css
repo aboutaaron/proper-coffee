@@ -8288,5 +8288,5 @@ a.label:hover, a.label:focus, a.badge:hover, a.badge:focus {
 /* line 5, ../../app/styles/main.scss */
 body {
   font-family: "Open Sans", san-serif;
-  font-color: #45280E;
+  margin-top: 20px;
 }
