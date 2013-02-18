@@ -4,6 +4,7 @@
 
 body {
     font-family: "Open Sans", san-serif;
+    font-smoothing: antialiased;
     margin-top: 20px;
 }
 
@@ -16,7 +17,7 @@ body {
     .coffee-drink {
         border: 4px solid $black;
         width: 100px;
-        height: 110px;
+        height: 70px;
         margin: 0 auto;
 
         #air {
@@ -33,10 +34,22 @@ body {
             display: block;
         }
 
-        #extra {
+        #syrup {
             background-color: #45280E;
             display: block;
         }
+
+        #water {
+            background-color: #017691;
+            display: block;
+        }
+    }
+
+    #steam {
+        color: $grayLighter;
+        display: block;
+        font: 50px "Skranji", cursive;
+        text-align: center;
     }
 
     h3, p {

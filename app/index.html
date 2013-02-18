@@ -11,7 +11,7 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="styles/main.css">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans|Skranji' rel='stylesheet' type='text/css'>
         <!-- build:js scripts/vendor/modernizr.js -->
         <script src="components/modernizr/modernizr.js"></script>
         <!-- endbuild -->
@@ -25,29 +25,33 @@
 
             <section id="coffee" class="row"></section>
 
-            <!-- <section class="span12">
+            <section class="span12">
                 <form action="#" id="addCoffee">
                     <h2>What you drinking?</h2>
                     <section>
-                        <label for="name"></label><input type="text" id="name" placeholder="Latte">
+                        <label for="name"></label><input type="text" id="name" placeholder="Name of the Drink">
                         <label for="espresso"></label><input type="text" id="espresso" placeholder="how many espresso shots?">
-                        <label for="milk"></label><input type="text" id="milk" placeholder="Milk to espresso ratio?">
+                        <label for="milk"></label><input type="text" id="milk" placeholder="Milk amount? e.g. ">
+                        <label for="water"></label><input type="text" id="water" placeholder="Any water in the drink?">
+                        <label for="syrup"></label><input type="text" id="syrup" placeholder="Any Syrup?">
                         <hr>
                         <button class="btn btn-primary" id="add">Add coffee drink</button>
                     </section>
                 </form>
-            </section> -->
+            </section>
 
             <!-- Template -->
             <script id='coffee-template' type='text/template'>
+                <span id="steam">sss</span>
                 <section class='coffee-drink'>
-                    <span id="air" style='margin-top: <%= 110 - ( extra + milk + espresso ) %>px'></span>
-                    <span id="extra" style='height: <%= extra %>px'></span>
-                    <span id="milk" style='height: <%= milk %>px'></span>
-                    <span id="espresso" style='height: <%= espresso %>px'></span>
+                    <span id="air" style='margin-top: <%= 70 - ( (syrup*10) + (milk*10) + (espresso*10) + (water*10) ) %>px'></span>
+                    <span id="syrup" style='height: <%= syrup*10 %>px'></span>
+                    <span id="milk" style='height: <%= milk*10 %>px'></span>
+                    <span id="espresso" style='height: <%= espresso*10 %>px'></span>
+                    <span id="water" style='height: <%= water*10 %>px'></span>
                 </section>
                 <h3 id="coffee-name"><%= name %></h3>
-                <p><%= espresso %> shots of espresso and <%= milk %> parts milk.</p>
+                <p><%= espresso %> shots of espresso and <%= milk %> parts milk. | <button class="delete btn btn-mini">Delete</button></p>
             </script>
 
         </section><!-- #coffee-app -->
