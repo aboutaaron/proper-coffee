@@ -8,7 +8,7 @@ Backbone app to display proper espresso drink ratios
 - Grunt
 - Bower
 
-If you need these (on OS X)
+### If you need these (on OS X)
 
 1.```brew install node``` (should include npm)
 
