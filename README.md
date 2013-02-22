@@ -10,7 +10,7 @@ Backbone app to display proper espresso drink ratios
 
 ### If you need these (on OS X)
 
-1.```brew install node``` (should include npm)
+1. ```brew install node``` (should include npm)
 
 2. ```npm install -g grunt-cli bower``` (installs tools globally)
 
