@@ -16,8 +16,8 @@ Backbone app to display proper espresso drink ratios
 
 ## Fire 'er up!
 
-1. ``` git clone git@github.com:aboutaaron/proper-coffee.git```
+1. ``` git clone git@github.com:aboutaaron/proper-coffee.git; cd proper-coffee```
 
 2. ```npm install && bower install```
 
-3. ```cd proper-coffee; grunt server```
+3. ```grunt server```
