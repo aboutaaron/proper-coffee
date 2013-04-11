@@ -4,9 +4,10 @@ var app = app || {};
 
 app.Coffee = Backbone.Model.extend({
     defaults: {
-        name: 'No drink',
-        espresso: 0,
+        name: 'single espresso',
         milk: 0,
-        other: "None"
+        espresso: 1,
+        syrup: 0,
+        water: 0
     },
 });
