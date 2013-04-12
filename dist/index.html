@@ -36,10 +36,8 @@
         <meta name="viewport" content="width=device-width">
         <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
         <link rel="stylesheet" href="styles/main.css">
-        <link href='http://fonts.googleapis.com/css?family=Open+Sans|Skranji|Junge' rel='stylesheet' type='text/css'>
-        <!-- build:js scripts/vendor/modernizr.js -->
-        <script src="components/modernizr/modernizr.js"></script>
-        <!-- endbuild -->
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans|Skranji|Junge" rel="stylesheet" type="text/css">
+        <script src="scripts/vendor/modernizr.js"></script>
     </head>
     <body>
         <section id="coffee-app" class="container">
@@ -53,7 +51,7 @@
             <!-- Template -->
             <!-- Total the sum of every item is 7
             so we multiple this by 10 to get a beefier pixel count -->
-            <script id='coffee-template' type='text/template'>
+            <script id="coffee-template" type="text/template">
                 <span id="steam">sss</span>
                 <section class='coffee-drink'>
                     <span id="air" style='margin-top: <%= 70 - ( (syrup*10) + (milk*10) + (espresso*10) + (water*10) ) %>px'></span>
@@ -85,23 +83,11 @@
             s.parentNode.insertBefore(g,s)}(document,'script'));
         </script>
 
-        <!-- build:js scripts/jquery.js -->
-        <script src="components/jquery/jquery.js"></script>
-        <!-- endbuild -->
+        <script src="scripts/jquery.js"></script>
 
-        <!-- build:js scripts/plugins.js -->
-        <script src="components/underscore/underscore-min.js"></script>
-        <script src="components/backbone/backbone-min.js"></script>
-        <script src="components/backbone.localStorage/backbone.localStorage-min.js"></script>
-        <!-- endbuild -->
+        <script src="scripts/plugins.js"></script>
 
-        <!-- build:js scripts/app.js -->
-        <script src="scripts/models/coffee.js"></script>
-        <script src="scripts/collections/cafe.js"></script>
-        <script src="scripts/views/coffee.js"></script>
-        <script src="scripts/views/cafe.js"></script>
         <script src="scripts/app.js"></script>
-        <!-- endbuild -->
 
 </body>
 </html>
