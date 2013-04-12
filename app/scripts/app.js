@@ -1,8 +1,10 @@
+/*global $:false */
+
 'use strict';
 
 var app = app || {};
 
-$(function() {
+$(function () {
     // Total sum can't exceed 7
     var coffees = [
         { name: 'double espresso', milk: 0, espresso: 2, syrup: 0, water: 0 },
@@ -16,5 +18,5 @@ $(function() {
         { name: 'devito', milk: 0, espresso: 2, syrup: 0, water: 1.5 }
     ];
 
-    new app.CafeView(coffees)
+    new app.CafeView(coffees);
 });
