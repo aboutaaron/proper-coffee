@@ -1,0 +1,93 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+<!--
+                   (
+                          )     (
+                           ___...(-------)-....___
+                       .-""       )    (          ""-.
+                 .-'``'|-._             )         _.-|
+                /  .--.|   `""---...........---""`   |  Favorite roasters:
+               /  /    |                             |  * Hearth (http://www.hearthcoffee.com/)
+               |  |    |                             |  * Blue Bottle (http://www.bluebottlecoffee.com/)
+                \  \   |                             |  * Sightglass (http://sightglasscoffee.com/)
+                 `\ `\ |                             |  * Four Barrel (http://fourbarrelcoffee.com/)
+                   `\ `|                             |  * Demitasse / LA (http://cafedemitasse.com/)
+                   _/ /\                             /  * Wrecking Ball (http://wreckingballcoffee.com/)
+                  (__/  \                           /
+               _..---""` \                         /`""---.._
+            .-'           \                       /          '-.
+           :               `-.__             __.-'              :
+           :                  ) ""---...---"" (                 :
+            '._               `"--...___...--"`              _.'
+           \""--..__                              __..--""/
+               '._     """----.....______.....----"""     _.'
+                  `""--..,,_____            _____,,..--""`
+                                `"""----"""`
+
+-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+        <link rel="stylesheet" href="styles/main.css">
+        <link href="http://fonts.googleapis.com/css?family=Open+Sans|Skranji|Junge" rel="stylesheet" type="text/css">
+        <script src="scripts/vendor/modernizr.js"></script>
+    </head>
+    <body>
+        <section id="coffee-app" class="container">
+            <header id="header">
+                <h1>Proper Coffee</h1>
+                <small>The best way to make espresso drinks</small>
+            </header>
+
+            <section id="coffee" class="row"></section>
+
+            <!-- Template -->
+            <!-- Total the sum of every item is 7
+            so we multiple this by 10 to get a beefier pixel count -->
+            <script id="coffee-template" type="text/template">
+                <span id="steam">sss</span>
+                <section class='coffee-drink'>
+                    <span id="air" style='margin-top: <%= 70 - ( (syrup*10) + (milk*10) + (espresso*10) + (water*10) ) %>px'></span>
+                    <span id="syrup" style='height: <%= syrup*10 %>px'></span>
+                    <span id="milk" style='height: <%= milk*10 %>px'></span>
+                    <span id="espresso" style='height: <%= espresso*10 %>px'></span>
+                    <span id="water" style='height: <%= water*10 %>px'></span>
+                </section>
+                <h3 id="coffee-name"><%= name %></h3>
+                <p><%= espresso %> shots of espresso and <%= milk %> parts milk.
+            </script>
+
+            <footer class="span12">
+                <p>Built by <a href="http://aboutaaron.com">@aboutaaron</a>.</p>
+                <p>Inspired by <a href="http://yeoman.io/">Yeoman</a>, <a href="http://addyosmani.github.io/backbone-fundamentals/">Developing Backbone.js Applications</a>, <a href="http://lokeshdhakar.com/coffee-drinks-illustrated/">Lokesh Dhakar</a> and my experience working at different cafes around California.</p>
+            </footer>
+
+        </section><!-- #coffee-app -->
+
+        <!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+        <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+        <script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+        </script>
+
+        <script src="scripts/jquery.js"></script>
+
+        <script src="scripts/plugins.js"></script>
+
+        <script src="scripts/app.js"></script>
+
+</body>
+</html>
