@@ -3,18 +3,24 @@
 
 
 body {
-    //background-image: url('../images/paper_fibers.png');
     font-family: "Open Sans", san-serif;
     font-smoothing: antialiased;
     margin-top: 20px;
 }
 
 #header {
-    @extend .hero-unit;
-    background-color: transparent;
-    color: #0D7851;
+    margin-bottom: 30px;
+    padding: 15px;
+    font-size: 18px;
+    line-height: 30px;
+    background-color: #0D7851;
+    color: #FFF;
+    
     h1 {
-        font-family: 'Junge', cursive;
+        font-family: 'Roboto', san-serif;
+    }
+    small {
+        font-style: italic;
     }
 }
 
