@@ -6,7 +6,7 @@ var mountFolder = function (connect, dir) {
 
 module.exports = function (grunt) {
     // load all grunt tasks
-    require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks);
+    require('load-grunt-tasks')(grunt);
 
     // configurable paths
     var yeomanConfig = {
@@ -25,9 +25,9 @@ module.exports = function (grunt) {
                 files: ['test/spec/*.coffee'],
                 tasks: ['coffee:test']
             },
-            compass: {
-                files: ['<%= yeoman.app %>/styles/*.{scss,sass}'],
-                tasks: ['compass']
+            sass: {
+              files: ['<%= yeoman.app %>/styles/{,*/}*.{scss,sass}'],
+              tasks: ['sass:server']
             },
             livereload: {
                 files: [
@@ -116,29 +116,36 @@ module.exports = function (grunt) {
                 }]
             }
         },
-        compass: {
-            options: {
-                sassDir: '<%= yeoman.app %>/styles',
-                cssDir: '.tmp/styles',
-                imagesDir: '<%= yeoman.app %>/images',
-                javascriptsDir: '<%= yeoman.app %>/scripts',
-                fontsDir: '<%= yeoman.app %>/styles/fonts',
-                importPath: 'app/components',
-                relativeAssets: true
-            },
-            dist: {},
-            server: {
-                options: {
-                    debugInfo: true
-                }
-            }
+        sass: {
+          options: {
+            sourceMap: true,
+            includePaths: '<%= yeoman.app %>/components'
+          },
+          dist: {
+            files: [{
+              expand: true,
+              cwd: '<%= yeoman.app %>/styles',
+              src: ['*.{scss,sass}'],
+              dest: '<%= yeoman.dist %>/styles',
+              ext: '.css'
+            }]
+          },
+          server: {
+            files: [{
+              expand: true,
+              cwd: '<%= yeoman.app %>/styles',
+              src: ['*.{scss,sass}'],
+              dest: '.tmp/styles',
+              ext: '.css'
+            }]
+          }
         },
         // not used since Uglify task does concat,
         // but still available if needed
         /*concat: {
             dist: {}
         },*/
-        
+
         uglify: {
             dist: {
                 files: {
@@ -224,8 +231,6 @@ module.exports = function (grunt) {
     });
 
     grunt.renameTask('regarde', 'watch');
-    // remove when mincss task is renamed
-    grunt.renameTask('mincss', 'cssmin');
 
     grunt.registerTask('server', function (target) {
         if (target === 'dist') {
@@ -235,7 +240,7 @@ module.exports = function (grunt) {
         grunt.task.run([
             'clean:server',
             'coffee:dist',
-            'compass:server',
+            'sass:server',
             'livereload-start',
             'connect:livereload',
             'open',
@@ -246,7 +251,7 @@ module.exports = function (grunt) {
     grunt.registerTask('test', [
         'clean:server',
         'coffee',
-        'compass',
+        'sass',
         'connect:test',
         'mocha'
     ]);
@@ -256,7 +261,7 @@ module.exports = function (grunt) {
         'jshint',
         'test',
         'coffee',
-        'compass:dist',
+        'sass:dist',
         'useminPrepare',
         'imagemin',
         'cssmin',
